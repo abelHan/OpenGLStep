@@ -41,3 +41,26 @@ project "01TestCon"
     libdirs "./lib"
     configuration { "windows" }
         links { "GLEW", "glu32", "opengl32", "winmm" ,"freeglut"}
+
+project "02HelloDot"
+    kind "ConsoleApp"
+    language "C++"
+    defines {"GLEW_STATIC"}
+    files {"02HelloDot/**.h","02HelloDot/**.cpp"}
+    includedirs {".","./common","./common/assimp"}
+    implibdir "./lib"
+    libdirs "./lib"
+    configuration { "windows" }
+        links { "GLEW", "glu32", "opengl32", "winmm" ,"freeglut"}
+
+project "03FirstTriangle"
+    kind "ConsoleApp"
+    language "C++"
+    defines {"GLEW_STATIC"}
+    files {"03FirstTriangle/**.h","03FirstTriangle/**.cpp"}
+    includedirs {".","./common","./common/assimp"}
+    implibdir "./lib"
+    libdirs "./lib"
+    configuration { "windows" }
+        links { "GLEW", "glu32", "opengl32", "winmm" ,"freeglut"}
+        
