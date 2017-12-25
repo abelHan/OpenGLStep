@@ -60,7 +60,7 @@ bool ReadFile(const char* pFileName, string& outFile)
 
 #ifdef WIN32
 
-char* ReadBinaryFile(const char* pFileName, int& size)
+bool ReadBinaryFile(const char* pFileName, int& size)
 {
     HANDLE f = CreateFileA(pFileName, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 
@@ -165,6 +165,7 @@ long long GetCurrentTimeMillis()
 #if (_MSC_VER == 1900)
 #elif (_MSC_VER == 1800)
 #else
+/*
 float fmax(float a, float b)
 {
     if (a > b)
@@ -172,5 +173,6 @@ float fmax(float a, float b)
     else
         return b;
 }
+*/
 #endif
 #endif

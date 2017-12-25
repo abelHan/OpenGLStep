@@ -20,7 +20,7 @@
 #define	OGLDEV_UTIL_H
 
 #ifndef WIN32
-#include <unistd.h>
+#include "unistd.h"
 #endif
 #include <stdlib.h>
 #include <stdio.h>
@@ -33,7 +33,7 @@
 using namespace std;
 
 bool ReadFile(const char* fileName, string& outFile);
-char* ReadBinaryFile(const char* pFileName, int& size);
+bool ReadBinaryFile(const char* pFileName, int& size);
 
 void OgldevError(const char* pFileName, uint line, const char* msg, ... );
 void OgldevFileError(const char* pFileName, uint line, const char* pFileError);

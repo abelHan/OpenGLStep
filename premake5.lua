@@ -63,4 +63,15 @@ project "03FirstTriangle"
     libdirs "./lib"
     configuration { "windows" }
         links { "GLEW", "glu32", "opengl32", "winmm" ,"freeglut"}
+
+project "05Uniform"
+    kind "ConsoleApp"
+    language "C++"
+    defines {"WIN32","GLEW_STATIC"}
+    files {"05Uniform/**.h","05Uniform/**.cpp","common/ogldev_util.h","common/ogldev_util.cpp"}
+    includedirs {".","./common","./common/assimp"}
+    implibdir "./lib"
+    libdirs "./lib"
+    configuration { "windows" }
+        links { "GLEW", "glu32", "opengl32", "winmm" ,"freeglut"}
         
