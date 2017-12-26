@@ -74,4 +74,27 @@ project "05Uniform"
     libdirs "./lib"
     configuration { "windows" }
         links { "GLEW", "glu32", "opengl32", "winmm" ,"freeglut"}
+
+
+
+project "11Transformations"
+    kind "ConsoleApp"
+    language "C++"
+    defines {"WIN32","GLEW_STATIC"}
+    files {
+        "11Transformations/**.h",
+        "11Transformations/**.cpp",
+        "common/ogldev_util.h",
+        "common/ogldev_util.cpp",
+        "common/ogldev_pipeline.h",
+        "common/ogldev_atb.h",
+        "common/ogldev_atb.cpp",
+        "common/pipeline.cpp",
+        "common/math_3d.cpp",
+        }
+    includedirs {".","./common","./common/assimp"}
+    implibdir "./lib"
+    libdirs "./lib"
+    configuration { "windows" }
+        links { "GLEW", "glu32", "opengl32", "winmm" ,"freeglut","AntTweakBar"}    
         
