@@ -120,6 +120,30 @@ project "12PerspectiveProjection"
     configuration { "windows" }
         links { "GLEW", "glu32", "opengl32", "winmm" ,"freeglut","AntTweakBar"}    
         
+project "13CameraSpace"
+    kind "ConsoleApp"
+    language "C++"
+    defines {"WIN32","GLEW_STATIC"}
+    files {
+        "13CameraSpace/**.h",
+        "13CameraSpace/**.cpp",
+        "common/ogldev_util.h",
+        "common/ogldev_util.cpp",
+        "common/ogldev_pipeline.h",
+        "common/ogldev_atb.h",
+        "common/ogldev_atb.cpp",
+        "common/ogldev_keys.h",
+        "common/pipeline.cpp",
+        "common/math_3d.cpp",
+        "common/ogldev_math_3d.h",
+        "common/camera.cpp",
+        }
+    includedirs {".","./common","./common/assimp"}
+    implibdir "./lib"
+    libdirs "./lib"
+    configuration { "windows" }
+        links { "GLEW", "glu32", "opengl32", "winmm" ,"freeglut","AntTweakBar"}    
+        
 
-
+        
         
